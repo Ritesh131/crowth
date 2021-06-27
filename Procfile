@@ -1,0 +1,1 @@
+web: gunicorn crowth.wsgi --log-file -

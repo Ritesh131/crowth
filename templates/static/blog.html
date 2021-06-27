@@ -1,0 +1,109 @@
+{% load static %}
+{% include "./../common/bash.html" %}
+
+{% block seo_title %}
+    <title>{{blog.title}}</title>
+    <meta name="title" content="{{blog.meta_title}}">
+    <meta name="description" content="{{blog.meta_description}}">
+    <meta name="author" content="Ritesh Bajpai">
+{% endblock seo_title %}
+
+{% block external_css %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %} ">
+{% endblock external_css %}
+
+{% block header %}
+    {% include "./../common/header.html" %}
+{% endblock header %}
+
+{% block content %}
+<div class="blog-single gray-bg">
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col-lg-8 m-15px-tb">
+                <article class="article">
+                    <div class="article-img">
+                        <img src="/media/{{blog.blog_thumbnil}}" title="" alt="">
+                    </div>
+                    <div class="article-title">
+                        {% comment %} <h6><a href="#">Lifestyle</a></h6> {% endcomment %}
+                        <h2>{{blog.title}}</h2>
+                        <div class="media" style='display:none'>
+                            <div class="avatar">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" title="" alt="">
+                            </div>
+                            <div class="media-body">
+                                <label>Rachel Roth</label>
+                                <span>26 FEB 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="article-content" data-aos="fade-up">
+                    {{blog.description|safe}}
+                    </div>
+                </article>
+                <div class="contact-form article-comment" style='display:none'>
+                    <h4>Leave a Reply</h4>
+                    <form id="contact-form" method="POST">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input name="Name" id="name" placeholder="Name *" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input name="Email" id="email" placeholder="Email *" class="form-control"
+                                        type="email">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea name="message" id="message" placeholder="Your message *" rows="4"
+                                        class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="send">
+                                    <button class="px-btn theme"><span>Submit</span> <i class="arrow"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4 m-15px-tb blog-aside">
+                <!-- Latest Post -->
+                <div class="widget widget-latest-post">
+                    <div class="widget-title">
+                        <h3>Latest Post</h3>
+                    </div>
+                    <div class="widget-body">
+                    {% for item in blog_list %}
+                    <div class="latest-post-aside media">
+                            <div class="lpa-left media-body">
+                                <div class="lpa-title">
+                                    <h5><a href="/blog/{{item.slug}}">{{item.title}}</a></h5>
+                                    {% comment %} <span>({{item.created_date}})</span> {% endcomment %}
+                                </div>
+                            </div>
+                            <div class="lpa-right">
+                                <a href="/blog/{{item.slug}}">
+                                    <img src="/media/{{item.blog_thumbnil}}" title="" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}                        
+                    </div>
+                </div>
+                <!-- End Latest Post -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block footer %}
+    {% include "./../common/footer.html" %}
+{% endblock footer %}

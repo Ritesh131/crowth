@@ -1,0 +1,362 @@
+{% load static %}
+{% include "./../common/bash.html" %}
+
+{% block external_css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %} ">
+{% endblock external_css %}
+
+{% block header %}
+    {% include "./../common/header.html" %}
+{% endblock header %}
+
+{% block content %}
+
+<div class='banner-block' data-aos="flip-left">
+    <div class="col-lg-12 pt-2">
+        <div class="row">
+            <div class="col-lg-6 pt-2">
+                <div class="banner-content">
+                    <h1 class="banner-heading w-75 ml-2">We help eCommerce businesses scale fast</h1>
+                    <hr class="heading-border" />
+                    <p class="banner-text">
+                    So whether you're just starting in the world of digital marketing or have been in the game for a while but are looking to make improvements to your ROI, I can help you reach your revenue goals!
+                    </p>
+                    <button class="banner-btn">Let's Start</button>
+                </div>>
+            </div>
+            <div class="col-lg-6">
+                <section class="containers">
+                    {% for i in '0123456789'|make_list %}
+                    <span></span>
+                    {% endfor %}
+                    {% for i in '0123456789'|make_list %}
+                    <span></span>
+                    {% endfor %}
+                    {% for i in '0123456789'|make_list %}
+                    <span></span>
+                    {% endfor %}
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="brands" data-aos="fade-up">
+    <img src="{% static "img/brand/1.png" %}" />
+    <img src="{% static "img/brand/2.png" %}" />
+    <img src="{% static "img/brand/3.png" %}" />
+    <img src="{% static "img/brand/4.png" %}" />
+</section>
+<div class="service-1" data-aos="fade-up" data-aos-duration="1000">
+    <div class="row">
+        <div class="col-lg-6" data-aos="flip-left" >
+            <div class="service-detail">
+                {% comment %} <img class="service-brand" src="https://lappyy.com/static/media/logo.97e8876a.png" /> {% endcomment %}
+                <h2 class="service-heading">RATTLE & CO</h2>
+                <hr class="service-line" />
+                <p class="service-content">Modern Handmade Lifestyle Products For Babies & Young Adults.
+                Platform: Major Focus on Facebook and Instagram
+                Aim: Increase Sales, Instagram Followers, and Avg. Order Value
+                </p>
+                <ul class="stats">
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>450% Increase in Quarterly Product Sales</span></li>
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>150% Increase in Average Order Value</span></li>
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>300% Increase in Page Views</span></li>
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>1:9 ROAS in First Quarter</span></li>
+                </ul>
+                <hr >
+                <div class="service-div"><a class="service-btn">FIND OUT</a></div>
+            </div>
+        </div>
+        <div class="col-lg-6" data-aos="flip-right" >
+            <img class="phone-img" src="{% static "img/brand/phone.png" %}" />
+        </div>
+    </div>
+</div>
+<section class="service-testimonial" data-aos="fade-up">
+    <div id="kudo-wrap">
+        <div class="adj-layer">
+            <h1>TESTIMONIAL</h1>
+            <div class="testimonial-quote group">
+                <img src="{% static 'img/review/Rattle&co.jpeg' %}">
+                <div class="quote-container">
+                    <blockquote>
+                        <p>We are very happy with the services of Crowth. Their expertise in the field of digital marketing is unparalleled and we have grown our sales and hit our targets constantly with their strategies." </p>
+                    </blockquote>
+                    <cite><span>~ Unnika & Yukti </span><br>
+                        (Founder, Rattle & Co)
+                    </cite>
+                </div>
+
+            </div>
+</section>
+<div class="service-2" data-aos="fade-up" data-aos-duration="1000">
+    <div class="row">
+        <div class="col-lg-6" data-aos="flip-right">
+            <div class="service-detail">
+                {% comment %} <img class="service-brand" src="https://lappyy.com/static/media/logo.97e8876a.png" /> {% endcomment %}
+                <h2 class="service-heading">OLFA ORIGINALS</h2>
+                <hr class="service-line" />
+                <p class="service-content"><b>Aim</b>: Presence on all digital platform, Increase website visitors & Sales, Improve keywords ranking, Website CRO analysis to improve conversion rate</p>
+                <ul class="stats">
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>131% Increase in Quarterly Sales</span></li>
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>300% Increase in Organic Traffic</span></li>
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>35% Sales from Text Message Marketing</span></li>
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>1:7 ROAS in First Six Months</span></li>
+                </ul>
+                <div class="service-div"><a class="service-btn">FIND OUT</a></div>
+            </div>
+        </div>
+        <div class="col-lg-6" data-aos="flip-left" >
+            <img class="phone-img" src="{% static "img/brand/phone.png" %}" />
+        </div>
+    </div>
+</div>
+<section class="service-testimonial" data-aos="fade-up">
+    <div id="kudo-wrap">
+        <div class="adj-layer">
+            <h1>TESTIMONIAL</h1>
+            <div class="testimonial-quote group">
+                <img src="{% static "img/review/olfa.jpg" %}">
+                    <div class="quote-container">
+                    <blockquote>
+                        <p>Crowth Consulting continues to impress us with their ongoing digital marketing strategy. Their quality of work is top-notch and their response time always on schedule.
+                        Rudhra and his team are a bunch of forward thinkers!”</p>
+                    </blockquote>
+                    <cite><span>Pallavi Bhatia</span><br>
+                        (Founder, Olfa Originals)
+                    </cite>
+                </div>
+
+            </div>
+</section>
+<div class="service-3" data-aos="fade-up" >
+    <div class="row">
+        <div class="col-lg-6" data-aos="flip-left" >
+            <div class="service-detail">
+                {% comment %} <img class="service-brand" src="https://lappyy.com/static/media/logo.97e8876a.png" /> {% endcomment %}
+                <h2 class="service-heading">BERRYBEE</h2>
+                <hr class="service-line" />
+                <p class="service-content">Modern learning essentials, in the form of books and toys for babies & children.</p>
+                {% comment %} <p><b>Platform</b>: Facebook and Instagram</p>
+                <p><b>Aim</b>: Increase Sales</p> {% endcomment %}
+                <ul class="stats">
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>875% Increase in Quarterly Sales</span></li>
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>150% Increase in AOV</span></li>
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>450% Increase in Website Traffic</span></li>
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>1:17 ROAS in First Quarter</span></li>
+                </ul>
+                <div class="service-div"><a class="service-btn">FIND OUT</a></div>
+            </div>
+        </div>
+        <div class="col-lg-6" data-aos="flip-right" >
+            <img class="phone-img" src="{% static "img/brand/phone.png" %}" />
+        </div>
+    </div>
+</div>
+<section class="service-testimonial" data-aos="fade-up">
+    <div id="kudo-wrap">
+        <div class="adj-layer">
+            <h1>TESTIMONIAL</h1>
+            <div class="testimonial-quote group">
+                <img
+                    src="{% static "img/review/BERRYBEE.jpg" %}">
+                <div class="quote-container">
+                    <blockquote>
+                        <p>We are very happy with the digital marketing services provided to us by Crowth Consulting.
+                        We have increased our numbers by almost 3 times, we would totally suggest his work to our friends and family.”</p>
+                    </blockquote>
+                    <cite><span>Kriti</span><br>
+                        (Owner BerryBee)
+                    </cite>
+                </div>
+
+            </div>
+</section>
+<div class="service-4" data-aos="fade-up" >
+    <div class="row">
+        <div class="col-lg-6" data-aos="flip-right" >
+            <div class="service-detail">
+                {% comment %} <img class="service-brand" src="https://lappyy.com/static/media/logo.97e8876a.png" /> {% endcomment %}
+                <h2 class="service-heading">JIM'S JUNGLE RETREAT</h2>
+                <hr class="service-line" />
+                <p class="service-content">Wildlife Resort in Corbett</p>
+                {% comment %} <p><b>Platform</b>: Facebook and Instagram</p>
+                <p><b>Aim</b>: Increase Sales</p> {% endcomment %}
+                <ul class="stats">
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>70% Increase in Revenue in Six Month</span></li>
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>376% Increase in Online Leads</span></li>
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>110% Decrease in cost per lead</span></li>
+                    <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
+                            class='stats-text'>40% Increase in Organic Traffic</span></li>
+                </ul>
+                <div class="service-div"><a class="service-btn">FIND OUT</a></div>
+            </div>
+        </div>
+        <div class="col-lg-6" data-aos="flip-left" >
+            <img class="phone-img" src="{% static "img/brand/phone.png" %}" />
+        </div>
+    </div>
+</div>
+<section class="service-testimonial" data-aos="fade-up">
+    <div id="kudo-wrap">
+        <div class="adj-layer">
+            <h1>TESTIMONIAL</h1>
+            <div class="testimonial-quote group">
+                <img
+                    src="{% static "img/review/jim.jpeg" %}">
+                <div class="quote-container">
+                    <blockquote>
+                        <p>Raju is an excellent resource for marketing on digital platforms and social media. He keeps updated on the latest technology shifts, algorithms, and trends, to provide an effective solution for online presence and sales. I would highly recommend his services. Our sales inquiries have undergone a considerable uptick ever since we engaged with his services.”</p>
+                    </blockquote>
+                    <cite><span>Daleep Akoi</span><br>
+                         (Owner JJR)
+                    </cite>
+                </div>
+
+            </div>
+</section>
+<section class="story-section">
+    <div class="section-continer">
+        <div class="story-content" data-aos="fade-up">
+            <h1>OUR NUMBERS TELL <br> THE STORY</h1>
+            <p>I help eCommerce businesses thrive and scale by getting them the return on ad spend (ROAS) they deserve from digital advertising. My goal is driving real success for our clients, not just running ads for them. We believe that partnering with our clients and working with them is how the magic happens. stats</p>
+        </div>
+        <div class="story-img" data-aos="fade-up">
+            <div class="story-block1">
+                <h4>ECOMMERCE</h4>
+                <h2>
+                    +1<span>B</span>
+                </h2>
+                <p>Transactions/Year</p>
+            </div>
+            <div class="story-block2">
+                <h4>MARKETERS</h4>
+                <h2>
+                    14 <span>%</span>
+                </h2>
+                <p>Positive Opt-in Rate</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="servise-section">
+    <div class="servise-box">
+    <div class="servise-block1" data-aos="fade-up" >
+        <div class="card">
+            <img src="https://easysoft-tech.herokuapp.com/media/services/Digital-Marketing.jpg" class="card-img-top" alt="...">
+            <div class="card-body servise-card">
+                <h4>Performance Marketing</h4>
+                <hr>
+              <p class="card-text">✓  Social Media Ads</p>
+              <p class="card-text">✓  Google Search and Display Ads</p>
+              <p class="card-text">✓  Mobile APP Optimization & Promotion</p>
+              <p class="card-text">✓  Search Engine Optimization</p>
+              <p class="card-text">✓  Text Message Marketing</p>
+              <p class="card-text">✓  Amazon Seller Central Optimization and Adverting</p>
+            </div>
+          </div>
+    </div>
+    <div class="servise-block2" data-aos="fade-up" >
+        <div class="card">
+            <img src="https://easysoft-tech.herokuapp.com/media/services/web.png" class="card-img-top" alt="...">
+            <div class="card-body servise-card">
+                <h4>Design and Development</h4>
+                <hr>
+              <p class="card-text">✓  E-commerce Website Development</p>
+              <p class="card-text">✓  Marketplace Set-up (Amazon, Flipkart, etc.)</p>
+              <p class="card-text">✓  Social Media Management</p>
+              <p class="card-text">✓  Advertising & Tracking Platform Set-up</p>
+              <p class="card-text">✓  Landing Page Strategy and Development</p>
+              <p class="card-text">✓  Brand Management & Development</p>
+            </div>
+          </div>
+    </div>
+    </div>
+    <div class="servise-box-2">
+        <div class="servise-block1" data-aos="fade-up" data-aos-duration="2500">
+            <div class="card">
+                <img src="https://blog.clickdimensions.com/wp-content/uploads/2019/03/BlogFeatureImage-Targeting-Audiences-Using-Segmentation-for-Survey-Success.png" class="card-img-top" alt="...">
+                <div class="card-body servise-card">
+                    <h4>Targeting</h4>
+                    <hr>
+                  <p class="card-text">✓  Audience Persona Creation</p>
+                  <p class="card-text">✓  Conduct Market Research and Identify Industry Trends</p>
+                  <p class="card-text">✓  Data-Driven Hyper-targeting</p>
+                  <p class="card-text">✓  Create a Custom Audience from website events</p>
+                  <p class="card-text">✓   Audience Research and Affinity Profile Development</p>
+                </div>
+              </div>
+        </div>
+        <div class="servise-block2" data-aos="fade-up" data-aos-duration="2500">
+            <div class="card">
+                <img src="https://static.matomo.org/wp-content/uploads/2020/02/campaign-tracking-web-ready-1.png" class="card-img-top" alt="...">
+                <div class="card-body servise-card">
+                    <h4>Tracking</h4>
+                    <hr>
+                  <p class="card-text">✓  E-commerce Funnel Visualization</p>
+                  <p class="card-text">✓  Heatmap Analysis to Improve UX</p>
+                  <p class="card-text">✓  KPI tracking and Reporting</p>
+                  <p class="card-text">✓  Customer Journey Mapping</p>
+                  <p class="card-text">✓  Implement Pixel and Other Tracking Code to Track User Interaction in Detail</p>
+                </div>
+              </div>
+        </div>
+        </div>
+</section>
+
+{% comment %} blog section {% endcomment %}
+<section class="our-blog" data-aos="fade-up">
+    <div class="container">
+        <div class="text-center blog-heading">
+            <h2><span>OUR BLOG</span></h2>
+        </div>
+        <hr />
+        <div class="row mt-5">
+        {% for item in blog %}
+        <div class="col-lg-4">
+                <div class="card">
+                    <img src="/media/{{item.blog_thumbnil}}"
+                        alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            <a href="#">{{item.title}}</a>
+                        </h5>
+                        <hr />
+                        <p class="card-text">
+                            {{item.short_description}}
+                        </p>
+                        <a class='blog-button' href="/blog/{{item.slug}}">Read More</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}            
+        </div>
+    </div>
+    <br />
+{% endblock content %}
+
+{% block footer %}
+    {% include "./../common/footer.html" %}
+{% endblock footer %}
