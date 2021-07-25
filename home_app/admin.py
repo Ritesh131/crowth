@@ -5,7 +5,6 @@ from .models import *
 # Register your models here.
 @admin.action(description='Duplicate Selected Record')
 def make_published(modeladmin, request, queryset):
-    print('dddd', queryset)
     for object in queryset:
         object.id = None
         object.save()
@@ -19,4 +18,11 @@ class BlogAdminView(admin.ModelAdmin):
     actions = [make_published]
 
 
+class QueryAdminView(admin.ModelAdmin):
+    list_display = ('id', 'name', 'email', 'phone', 'created_date')
+    search_fields = ('name', 'email', 'phone')
+
+
 admin.site.register(Blog, BlogAdminView)
+admin.site.register(Query, QueryAdminView)
+admin.site.register(Services)

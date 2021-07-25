@@ -1,0 +1,26 @@
+{% load static %}
+{% include "./../common/bash.html" %}
+
+{% block external_css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %} ">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% endblock external_css %}
+
+{% block header %}
+    {% include "./../common/header.html" %}
+{% endblock header %}
+
+{% block content %}
+<div class="jumbotron text-center" style="background:none;">
+    <h1 class="display-5 pb-0 mb-4">Thank You!</h1>
+    <p class="lead"><strong>Our Experts will get back to you shortly.</p>
+    <hr>
+    <p class="lead mb-4 pb-2 pt-2">
+        <a class="btn btn-primary btn-sm" href="/" role="button">Continue to homepage</a>
+    </p>
+</div>
+{% endblock content %}
+
+{% block footer %}
+    {% include "./../common/footer.html" %}
+{% endblock footer %}

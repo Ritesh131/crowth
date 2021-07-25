@@ -10,10 +10,10 @@ body {
 .nav {
   height: 50px;
   width: 100%;
-  /* background: black; */
-  background: orange;
+  background: #231e1c;
+  /* background: orange; */
   position: relative;
-  opacity: 0.7;
+  /* opacity: 0.9; */
 }
 
 .nav > .nav-header {

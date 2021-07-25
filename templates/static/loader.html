@@ -1,0 +1,110 @@
+<style>
+    .loader-body{
+        background-color: #02143c;
+        height: 100vh;
+    }
+    .default-hide {
+        display: none !important;
+    }
+
+    .disc{
+        width: 120px;
+        height: 100px;
+    }
+
+    .ring-frame,
+    .disc-frame {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ring-frame,
+    .disc-frame,
+    .ring,
+    .disc {
+        position: absolute;
+    }
+
+    .ring {
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-left: 2px solid #3f51b5;
+        border-right: 2px solid #ff5722;
+        border-radius: 50%;
+        display: flex;
+    }
+
+    .ring:nth-child(1) {
+        animation: spin 1s linear infinite;
+    }
+
+    .ring:nth-child(2) {
+        animation: spinner 1.5s linear infinite;
+    }
+
+    .ring:nth-child(3) {
+        animation: spin 2s linear infinite;
+    }
+
+    .disc {
+        /* height: var(--size);
+        width: var(--size); */
+        border: 2px solid var(--blue);
+        opacity: .9;
+        border-radius: 50%;
+        animation: rotate 3s linear infinite;
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: rotate3D(1, 0.25, 0.75, 360deg);
+        }
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotateZ(360deg);
+        }
+    }
+
+    @keyframes spinner {
+        to {
+            transform: rotateZ(-360deg);
+        }
+    }
+</style>
+
+<div class="loader-body" id="loader-hide">
+    <div class="ring-main" id="loaderBlock">
+        <div class="ring-frame">
+
+        </div>
+        <div class="disc-frame">
+
+        </div>
+    </div>
+</div>
+
+<script>
+    let container = document.querySelector(".container");
+    let ring = document.querySelector(".ring-frame");
+    let disc = document.querySelector(".disc-frame");
+    let i = 1;
+    let num = 200;
+    let radius = 150;
+    let lim = 4;
+
+    for (i; i < lim; i++) {
+        let span = document.createElement('span');
+        let disk = document.createElement('span')
+        span.setAttribute("class", "ring");
+        disk.setAttribute("class", "disc");
+        span.style.height = `${(i * 10) + num}px`;
+        span.style.width = `${(i * 10) + num}px`;
+        disk.style.animationDelay = `${i - .8}s`;
+        ring.append(span);
+        disc.append(disk);
+    }
+</script>

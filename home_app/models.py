@@ -27,3 +27,28 @@ class Blog(models.Model):
     
     class Meta:
         ordering = ('-id',)
+
+
+class Services(models.Model):
+    name = models.CharField(default='', max_length=150)
+
+    def __str__(self):
+        return self.name
+    
+
+class Query(models.Model):
+    MONTHLY_BUDGET = (
+        ('1','$3-5k per Month'),
+        ('2','$5-10k per Month'),
+        ('3','$10-20k per Month'),
+        ('4','$20k+ per Month')
+    )
+
+    name = models.CharField(max_length=150)
+    email = models.CharField(max_length=150, null=True, blank=True)
+    phone = models.CharField(max_length=150, null=True, blank=True)
+    company_name = models.CharField(max_length=150, null=True, blank=True)
+    message = models.TextField(null=True, blank=True, default='')
+    monthly_pay = models.CharField(choices=MONTHLY_BUDGET, default='1', max_length=150)
+    services = models.ManyToManyField(Services, blank=True)
+    created_date = models.DateTimeField(auto_now=True)

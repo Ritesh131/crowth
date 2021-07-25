@@ -1,0 +1,147 @@
+@media screen and (max-width: 720px) {
+    .banner-heading{
+        font-size: 32px;
+        margin: 0px;
+    }
+    .banner-text{
+        color: #fff;
+        text-align: left;
+        width: 95%;
+        padding-top: 15px;
+    }
+    .heading-border{
+        margin-top: -30px;
+    }
+    .brands img{
+        width: 45%;
+        margin: 5px;
+    }
+    .phone-img{
+        display: none;
+    }
+    .service-heading{
+        margin-left: 0px;
+        font-size: 40px;
+    }
+    .stats{
+        margin: 0px;
+        width: 365px;
+        margin-left: -40px;
+        margin-top: 10px;
+    }
+    .stats li{
+        width: 100%;
+    }
+    .stats-text{
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0px;
+    }
+    .stats-img{
+        width: 15px;
+    }
+    .adj-layer h1{
+        font-size: 30px;
+    }
+    #kudo-wrap{
+        height: auto;
+    }
+    .testimonial-quote img {
+        margin-left: 25%;
+    }
+    .quote-container{
+        width: 350px;
+        text-align: justify;
+        padding: 0px !important;
+        padding-top: 135px !important;
+        margin-left: -50px;
+    }
+    .testimonial-quote blockquote{
+        font-size: 1.1em;
+    }
+    .testimonial-quote cite{
+        text-align: center;
+    }
+    .service-content {
+        text-align: justify;
+        font-size: 16px;
+        font-weight: 400;
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+    }
+    .story-section{
+        width: 100%;
+        padding: 0px;
+        height: 650px;
+        margin-left: 0px;
+    }
+    .story-content h1{
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        color: #403d3d;
+        line-height: 1.4;
+        margin: 0px;
+        padding: 0px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .story-content{
+        width: 100%;
+    }
+    .story-img{
+        width: 100%;
+    }
+    .story-block1{
+        border: none;
+        width: 45%;
+        float: left;
+    }
+    .story-block2{
+        width: 45%;
+        float: left;
+        border-left: 1px solid gray;
+    }
+    .servise-block1{
+        width: 100%;
+        margin-left: -20px;
+    }
+    .servise-block2{
+        width: 100%;
+        margin-left: -20px;
+    }
+    .servise-block3{
+        width: 100%;
+        margin-left: -20px;
+    }
+    .servise-block4{
+        width: 100%;
+        margin-left: -20px;
+    }
+    .card{
+        width: 100% !important;
+    }
+    .blog-heading{
+        width: 98%;
+    }
+    .contact-image img{
+        width: 35%;
+    }
+    .contact-form .form-controls{
+        padding: 0px;
+    }
+    .contact-form form{
+        padding: 0px;
+        padding-top: 5%;
+        padding-right: 5%;
+    }
+    .service-col{
+        width: 50%;
+        float: left;
+    }
+    .select-option{
+        padding: 0px;
+    }
+  }

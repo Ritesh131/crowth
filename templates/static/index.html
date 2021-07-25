@@ -3,20 +3,39 @@
 
 {% block external_css %}
 <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 {% endblock external_css %}
 
+<script>
+window.onload = function() {
+  loaderMethod();
+};
+    function loaderMethod(){
+        setTimeout(hideLoader(), 90000);
+    }
+
+    function hideLoader(){
+        document.getElementById('homeBlock').classList.remove('default-hide')
+        document.getElementById('loaderBlock').classList.remove('default-open')
+        document.getElementById('loaderBlock').classList.add('default-hide')
+        document.getElementById('loader-hide').classList.add('default-hide')
+    }
+</script>
+
+{% include "./loader.html" %}
+
+<div class='default-hide' id='homeBlock'>
 {% block header %}
     {% include "./../common/header.html" %}
 {% endblock header %}
 
 {% block content %}
-
 <div class='banner-block' data-aos="flip-left">
     <div class="col-lg-12 pt-2">
         <div class="row">
-            <div class="col-lg-6 pt-2">
+            <div class="col-lg-12 pt-5">
                 <div class="banner-content">
-                    <h1 class="banner-heading w-75 ml-2">We help eCommerce businesses scale fast</h1>
+                    <h1 class="banner-heading w-75 ml-2">We help <span class="banner-higlight">eCommerce</span> businesses scale fast</h1>
                     <hr class="heading-border" />
                     <p class="banner-text">
                     So whether you're just starting in the world of digital marketing or have been in the game for a while but are looking to make improvements to your ROI, I can help you reach your revenue goals!
@@ -24,7 +43,7 @@
                     <button class="banner-btn">Let's Start</button>
                 </div>>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-0">
                 <section class="containers">
                     {% for i in '0123456789'|make_list %}
                     <span></span>
@@ -73,8 +92,7 @@
                     <li><span><img class='stats-img' src="{% static "img/green.png" %}" /></span><span
                             class='stats-text'>1:9 ROAS in First Quarter</span></li>
                 </ul>
-                <hr >
-                <div class="service-div"><a class="service-btn">FIND OUT</a></div>
+                {% comment %} <div class="service-div"><a class="service-btn">FIND OUT</a></div> {% endcomment %}
             </div>
         </div>
         <div class="col-lg-6" data-aos="flip-right" >
@@ -82,10 +100,10 @@
         </div>
     </div>
 </div>
-<section class="service-testimonial" data-aos="fade-up">
+<section class="service-testimonial" data-aos="fade-up" id="testimonials">
     <div id="kudo-wrap">
         <div class="adj-layer">
-            <h1>TESTIMONIAL</h1>
+            {% comment %} <h1>TESTIMONIAL</h1> {% endcomment %}
             <div class="testimonial-quote group">
                 <img src="{% static 'img/review/Rattle&co.jpeg' %}">
                 <div class="quote-container">
@@ -128,7 +146,7 @@
 <section class="service-testimonial" data-aos="fade-up">
     <div id="kudo-wrap">
         <div class="adj-layer">
-            <h1>TESTIMONIAL</h1>
+            {% comment %} <h1>TESTIMONIAL</h1> {% endcomment %}
             <div class="testimonial-quote group">
                 <img src="{% static "img/review/olfa.jpg" %}">
                     <div class="quote-container">
@@ -174,7 +192,7 @@
 <section class="service-testimonial" data-aos="fade-up">
     <div id="kudo-wrap">
         <div class="adj-layer">
-            <h1>TESTIMONIAL</h1>
+            {% comment %} <h1>TESTIMONIAL</h1> {% endcomment %}
             <div class="testimonial-quote group">
                 <img
                     src="{% static "img/review/BERRYBEE.jpg" %}">
@@ -221,7 +239,7 @@
 <section class="service-testimonial" data-aos="fade-up">
     <div id="kudo-wrap">
         <div class="adj-layer">
-            <h1>TESTIMONIAL</h1>
+            {% comment %} <h1>TESTIMONIAL</h1> {% endcomment %}
             <div class="testimonial-quote group">
                 <img
                     src="{% static "img/review/jim.jpeg" %}">
@@ -233,10 +251,55 @@
                          (Owner JJR)
                     </cite>
                 </div>
-
             </div>
 </section>
-<section class="story-section">
+
+<section class="servise-section" id="services" data-aos="fade-up">
+    <div class="container">
+        <br />
+        <center><h2 style="color:#fff" class="services-heading">Our Services</h2></center>
+        <hr class="services-hr" />
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="col service-col">
+        <img src="https://www.freelogodesign.org/assets/img/logo-colors-meanings/logos-blancs/logo-apple.svg" />
+        <h4>Performance</h4>
+        <p>Social Media Advertising</p>
+        <p>Search Engine Marketing</p>
+        <p>Display & Video Advertising</p>
+        <p>Email Marketing</p>
+        <p>Text Message Marketing</p>
+        </div>
+        <div class="col service-col">
+        <img src="data:image/png;base64,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" />
+        <h4>Ecommerce</h4>
+        <p>Marketplace Set up and launch</p>
+        <p>Marketplace S.E.O and Product Optimization</p>
+        <p>Marketplace Advertising Management</p>
+        <p>Marketplace Price and Promotion Management</p>
+        </div>
+        <div class="col service-col">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWDYmxzOIspoWLsh0sBHfcnhs-lKV9ePcZMg&usqp=CAU" />
+        <h4>Development</h4>
+        <p>Website Development</p>
+        <p>Ecommerce Store Development</p>
+        <p>Landing Page & Funnel Visualization</p>
+        <p>User Experience Testing</p>
+        <p>Conversion Rate Optimization</p>
+        </div>
+        <div class="col service-col">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5EbEuXI6vemF5c9i01xxs9TIkrS6J4AhdlEiUua6M0HcL9hr9fkglllNHi_hUPuABoiU&usqp=CAU" />
+        <h4>Technology</h4>
+        <p>ROAS Management</p>
+        <p>Reporting and Forcasting</p>
+        <p>Competitor Analysis</p>
+        <p>Email Automation</p>
+        <p>Whatsapp Automation</p>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="story-section" data-aos="fade-up">
     <div class="section-continer">
         <div class="story-content" data-aos="fade-up">
             <h1>OUR NUMBERS TELL <br> THE STORY</h1>
@@ -261,73 +324,8 @@
     </div>
 </section>
 
-<section class="servise-section">
-    <div class="servise-box">
-    <div class="servise-block1" data-aos="fade-up" >
-        <div class="card">
-            <img src="https://easysoft-tech.herokuapp.com/media/services/Digital-Marketing.jpg" class="card-img-top" alt="...">
-            <div class="card-body servise-card">
-                <h4>Performance Marketing</h4>
-                <hr>
-              <p class="card-text">✓  Social Media Ads</p>
-              <p class="card-text">✓  Google Search and Display Ads</p>
-              <p class="card-text">✓  Mobile APP Optimization & Promotion</p>
-              <p class="card-text">✓  Search Engine Optimization</p>
-              <p class="card-text">✓  Text Message Marketing</p>
-              <p class="card-text">✓  Amazon Seller Central Optimization and Adverting</p>
-            </div>
-          </div>
-    </div>
-    <div class="servise-block2" data-aos="fade-up" >
-        <div class="card">
-            <img src="https://easysoft-tech.herokuapp.com/media/services/web.png" class="card-img-top" alt="...">
-            <div class="card-body servise-card">
-                <h4>Design and Development</h4>
-                <hr>
-              <p class="card-text">✓  E-commerce Website Development</p>
-              <p class="card-text">✓  Marketplace Set-up (Amazon, Flipkart, etc.)</p>
-              <p class="card-text">✓  Social Media Management</p>
-              <p class="card-text">✓  Advertising & Tracking Platform Set-up</p>
-              <p class="card-text">✓  Landing Page Strategy and Development</p>
-              <p class="card-text">✓  Brand Management & Development</p>
-            </div>
-          </div>
-    </div>
-    </div>
-    <div class="servise-box-2">
-        <div class="servise-block1" data-aos="fade-up" data-aos-duration="2500">
-            <div class="card">
-                <img src="https://blog.clickdimensions.com/wp-content/uploads/2019/03/BlogFeatureImage-Targeting-Audiences-Using-Segmentation-for-Survey-Success.png" class="card-img-top" alt="...">
-                <div class="card-body servise-card">
-                    <h4>Targeting</h4>
-                    <hr>
-                  <p class="card-text">✓  Audience Persona Creation</p>
-                  <p class="card-text">✓  Conduct Market Research and Identify Industry Trends</p>
-                  <p class="card-text">✓  Data-Driven Hyper-targeting</p>
-                  <p class="card-text">✓  Create a Custom Audience from website events</p>
-                  <p class="card-text">✓   Audience Research and Affinity Profile Development</p>
-                </div>
-              </div>
-        </div>
-        <div class="servise-block2" data-aos="fade-up" data-aos-duration="2500">
-            <div class="card">
-                <img src="https://static.matomo.org/wp-content/uploads/2020/02/campaign-tracking-web-ready-1.png" class="card-img-top" alt="...">
-                <div class="card-body servise-card">
-                    <h4>Tracking</h4>
-                    <hr>
-                  <p class="card-text">✓  E-commerce Funnel Visualization</p>
-                  <p class="card-text">✓  Heatmap Analysis to Improve UX</p>
-                  <p class="card-text">✓  KPI tracking and Reporting</p>
-                  <p class="card-text">✓  Customer Journey Mapping</p>
-                  <p class="card-text">✓  Implement Pixel and Other Tracking Code to Track User Interaction in Detail</p>
-                </div>
-              </div>
-        </div>
-        </div>
-</section>
-
 {% comment %} blog section {% endcomment %}
-<section class="our-blog" data-aos="fade-up">
+<section class="our-blog" data-aos="fade-up" id="blog">
     <div class="container">
         <div class="text-center blog-heading">
             <h2><span>OUR BLOG</span></h2>
@@ -355,8 +353,101 @@
         </div>
     </div>
     <br />
+</section>
+
+{% comment %} section image {% endcomment %}
+<section class="section-gridImg" data-aos="fade-up" id="clients">
+    <div class="container">
+        <div class="row">
+        <div class="col-3 column-border">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_BqkoajeTsr0nB0zBTmoJZZmlD-CZS-tRUQ&usqp=CAU" />
+        </div>
+        <div class="col-3 column-border">
+        <img src="data:image/png;base64,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" />
+        </div>
+        <div class="col-3 column-border">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7XnuyMviLuf12XvFh9tiaAKQFfVCNeqOtOw&usqp=CAU" />
+        </div>        
+        <div class="col-3 column-border">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH2L1TMh9v5CvlaUQxBl-5WavdvJtoxeVEsQ&usqp=CAU" />
+        </div>
+        <div class="col-3 column-border">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6dTO1FZgPSiS7za8qGbPiGyQ4tGeCkrn36Q&usqp=CAU" />
+        </div>
+        <div class="col-3 column-border">
+        <img src="https://i.pinimg.com/originals/2f/0d/35/2f0d35fb049aff5f51dcd01538abfa77.png" />
+        </div>
+        <div class="col-3 column-border">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwiaEk5e2LSD8TmFKzWlHdaAfloMKpc7wh9A&usqp=CAU" />
+        </div>
+        <div class="col-3 column-border">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmaPiU5rEd9zpNUMgWe8X8qm34BzbjW92-wg&usqp=CAU" />
+        </div>
+        </div>
+    </div>
+</section>
+{% comment %} end {% endcomment %}
+{% comment %} contact us block {% endcomment %}
+    <section class="section-contact" data-aos="fade-up" id="contact">
+        <div class="container contact-form">
+            <div class="contact-image">
+                {% comment %} <img src="{% static 'img/logo/logo.png' %}" alt="rocket_contact"/> {% endcomment %}
+            </div>
+            <div class="text-center blog-heading">
+                <h2><span>Get In Touch</span></h2>
+            </div>            
+            <form action="/query/submit" method="POST">
+            {% csrf_token %}
+                {% comment %} <h3>Drop Us a Message</h3> {% endcomment %}
+               <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-controls" placeholder="Your Name *" value="" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="email" class="form-controls" placeholder="Email Address" value="" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone" class="form-controls" placeholder="Phone Number" value="" required />
+                        </div>                        
+                        <div class="form-group">                            
+                            <textarea name="message" class="form-controls" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                        </div>                        
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="company_name" class="form-controls" placeholder="Company Name" value="" required />
+                        </div>
+                        <div class="form-group">
+                            <select name="monthly_pay" id="monthly_pay" required>
+                            <option>Total Monthly Marketing Spend*</option>
+                            <option value="1">$3-5k per Month</option>
+                            <option value="2">$5-10k per Month</option>
+                            <option value="3">$10-20k per Month</option>
+                            <option value="4">$20k+ per Month</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-multiselect">
+                        <p>Which services are you interested in?</p> 
+                        <div class='select-option'>
+                            {% for service in services %}
+                                <input type="checkbox" id="seo" name="services" value="{{service.id}}">
+                                <label> {{service.name}} </label> <br>                             
+                            {% endfor %}                                              
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row submit-btn'>
+                <center><button type="submit" name="sbtn" class="sbtn btn btn-primary" value="Send Message" />Send Message</center>
+                </div>                
+            </form>
+        </div>
+    </section>
+{% comment %} end block contact {% endcomment %}
 {% endblock content %}
 
 {% block footer %}
     {% include "./../common/footer.html" %}
 {% endblock footer %}
+</div>

@@ -1,5 +1,5 @@
 .our-blog {
-  background-color: #f8f9fa;
+  background-color: #fafafc;
   padding: 10px 0;
 }
 
@@ -99,7 +99,7 @@
     font-weight: 700;
 } */
 
-.card-title a{
+.card-title a {
   text-decoration: auto;
 }
 
@@ -136,7 +136,216 @@
   background-position: right center;
   cursor: pointer;
 }
-.blog-heading{
-  background: #8080803d;
+.blog-heading {
+  /* background: #8080803d; */
   padding: 5px;
+}
+
+.contact-form {
+  background: transparent;
+  padding: 0px;
+  margin: 50px;
+  width: 70%;
+}
+.contact-form .form-control {
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid #8080806e;
+}
+
+.contact-form .form-controls {
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid #8080801f;
+  width: 100%;
+  margin: 10px;
+  background: transparent;
+}
+
+.contact-form .form-controls:focus-visible{
+  border: 1px solid #80808080;
+  padding: 5px;
+  outline: none;
+  border-radius: 4px;
+}
+
+.contact-image {
+  text-align: center;
+}
+
+.contact-image img {
+  border-radius: 6rem;
+  background: #80808026;
+  width: 12%;
+  margin-top: -3%;
+  /* transform: rotate(29deg); */
+}
+.contact-form form {
+  padding: 1%;
+}
+.contact-form h3 {
+  margin-bottom: 8%;
+  margin-top: -10%;
+  text-align: center;
+  color: #0062cc;
+}
+.contact-form .btnContact {
+  width: 50%;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5%;
+  background: #dc3545;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.btnContactSubmit {
+  width: 50%;
+  border-radius: 1rem;
+  padding: 1.5%;
+  color: #fff;
+  background-color: #0062cc;
+  border: none;
+  cursor: pointer;
+}
+
+.form-control:focus{
+  border: 1px solid #8080805c !important;
+}
+
+.sbtn{
+  margin-top: 40px;
+  /* width: 100px; */
+}
+
+.testimonial-quote img{
+  margin-left: 45%;
+}
+
+
+@media screen and (min-width: 1100px) {
+  .testimonial-quote .quote-container{
+    padding-top: 10%;
+  }
+  .testimonial-quote cite{
+    padding-left: 37%;
+    padding-top: 20px;
+  }
+}
+.banner-higlight{
+  background-color: #d41870;
+}
+
+.service-testimonial{
+  background-color: #fafafc;
+}
+
+.service-col h4{
+  font-size: 26px;
+  color: #000000;
+  border-bottom: 1px solid;
+  width: 35px;
+  margin-bottom: 25px;
+}
+
+.service-col p{
+  font-size: 15px;
+  color: #000;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.service-col img{
+  width: 40px;
+  margin-left: 20%;
+  border-radius: 50%;
+  height: 40px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.services-heading{
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.services-hr{
+  color: #fff;
+  width: 20%;
+  margin-left: 40%;
+}
+
+.section-gridImg{
+  background-color: #fff;
+  padding: 30px;
+}
+
+.column-border{
+  border: 1px solid #ffffff;
+  padding: 0px !important;
+}
+
+.column-border img{
+  width: 100%;
+  height: 180px;
+}
+.form-group select{
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #80808061;
+  padding: 8px;
+  color: gray;
+}
+
+.form-group select:focus-visible{
+  outline: none;
+}
+.form-multiselect{
+  padding: 20px 10px;
+}
+
+.form-multiselect p{
+  border-bottom: 1px solid #3636362b;
+  color: gray;
+}
+
+.select-option{
+  padding: 5px 20px;
+  font-size: 18px;
+  color: #9e9e9e;
+}
+
+.select-option input{
+  height: 18px;
+  width: 18px;
+}
+
+#cars{
+  color: #9e9e9e;
+}
+
+.footer{
+  width: 100%;
+  position: relative;
+  margin: 0px;
+  height: auto;
+  background-color: #070617;
+  padding: 15px;
+}
+
+.copyright{
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+
+.nav-links{
+  z-index: 999;
+  background: transparent;
+}
+
+.default-hide{
+  display: none;
 }
